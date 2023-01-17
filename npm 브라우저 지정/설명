@@ -1,0 +1,4 @@
+맥에서 npm의 기본 브라우저는 chrome으로 설정되어있다
+npm의 package.json에 브라우저를 지정하거나 
+npm start를 할 때 앞에 BROWSER="" 하고 안에 브라우저를 넣는다
+브라우저 이름은 돌아가는 컴퓨터마다 다르니까(어디에서는 chrome해도 되고 어디에는 google chrome으로 해야함)검색하고 넣기

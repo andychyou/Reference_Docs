@@ -1,0 +1,12 @@
+memcpy(dest, src, size)
+
+src로부터 0번째 인덱스에서 입력한 size 값 까지의 byte를 복사해서 dest에 옮긴다
+
+
+정석 예제
+int a[3] = {1,2,3};
+int b[4] = {7,8,9,10};
+memcpy(b, a, sizeof(a));
+b는 {1,2,3,10}이 됨
+
+https://blockdmask.tistory.com/442

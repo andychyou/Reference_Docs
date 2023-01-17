@@ -1,0 +1,24 @@
+if(arr[p] < arr[m] && arr[m] < arr[r]){//get median
+        median = m;
+    }
+    else if(arr[p] < arr[r] && arr[r] < arr[m]){
+        median = r;
+    }
+    else if(arr[r] < arr[p] && arr[p] < arr[m]){
+        median = p;
+    }
+    else if(arr[r] < arr[m] && arr[m] < arr[p]){
+        median = m;
+    }
+    else if(arr[m] < arr[r] && arr[r] < arr[p]){
+        median = r;
+    }
+    else if{
+        median = p;
+    }
+
+else if만 쓰면 내가 모르는 경우에 대해서는 else가 없기 때문에 조건문이 실행되지 않는다.
+지금 조건들을 보면 a < b < c 이렇게 돼있는데, a = b 또는 b = c의 경우 처럼 수가 같아지는 경우에 대해서는 생각을 안했다.
+근데 나는 가능한 6개의 경우를 모두 생각했다고 착각해서 else if로만 짰는데 이렇게 되면 실질적으로 a = b 또는 b = c의 경우가 나왔을 때는 어떤 조건문에도 걸리지 않는다. 그래서 소팅을 할 때  a = b 또는 b = c의 경우가 나왔을 때 median 값이 안구해져서 arr[median]이 메모리 참조 에러를 발생 -> segmentation fault를 냈다.
+
+그러니까 segmentation fault가 나왔을 때는  조건문을 나열한 거 중에서 빼먹은 조건의 케이스가 있는지 보고, 조건문 끝에는 else로 쓰도록 하자
